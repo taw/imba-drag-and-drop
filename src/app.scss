@@ -1,0 +1,32 @@
+@import 'normalize-scss';
+@include normalize();
+
+.App {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: 1fr 1fr;
+
+  header {
+    font-size: 64px;
+    text-align: center;
+    grid-column: 1/3;
+  }
+
+  .Container:nth-child(2) {
+    background-color: #aaf;
+  }
+
+  .Container:nth-child(3) {
+    background-color: #afa;
+  }
+
+  .Item {
+    height: 64px;
+    width: 64px;
+    margin: 12px;
+    padding: 12px;
+    border: 2px solid black;
+    background-color: #faa;
+  }
+}
