@@ -3,6 +3,8 @@ let currentdrag = {}
 
 tag Item
   def ondragstart(e)
+    # Firefox workaround:
+    e.event:data-transfer.set-data('text/plain', '')
     currentdrag = {data: data, source: self}
 
   def render
